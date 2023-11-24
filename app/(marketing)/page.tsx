@@ -1,16 +1,14 @@
 import { Button } from "@/components/ui/button"
+import { headingFont, textFont } from "@/fonts"
 import { cn } from "@/lib/utils"
 import { Medal } from "lucide-react"
-import localFont from "next/font/local"
 import Link from "next/link"
 
-const headingFont = localFont({
-  src: "../../public/fonts/font.woff2",
-})
+
 
 export default function MarketingPage() {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center  justify-center">
       <div
         className={cn(
           "flex flex-col items-center justify-center",
@@ -28,7 +26,12 @@ export default function MarketingPage() {
           work forward.
         </div>
       </div>
-      <div className="text-muted-foreground mx-auto mt-4 max-w-xs text-center text-sm md:max-w-2xl md:text-xl">
+      <div
+        className={cn(
+          "text-muted-foreground mx-auto mt-4 max-w-xs text-center text-sm md:max-w-2xl md:text-xl",
+          textFont.className
+        )}
+      >
         Collaborate, manage projects, and reach new productivity peaks. From
         high rises to the home office, the way your team works is
         unique—accomplish it all with Taskify.
