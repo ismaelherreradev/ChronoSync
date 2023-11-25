@@ -1,10 +1,6 @@
 import { OrganizationList } from '@clerk/nextjs'
 
-export default function CreateOrganizationPage({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function CreateOrganizationPage() {
   return (
     <OrganizationList
       hidePersonal

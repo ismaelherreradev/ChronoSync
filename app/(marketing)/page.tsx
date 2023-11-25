@@ -1,10 +1,8 @@
 import Link from 'next/link'
-
 import { headingFont, textFont } from '@/fonts'
 import { Medal } from 'lucide-react'
 
 import { cn } from '@/lib/utils'
-
 import { Button } from '@/components/ui/button'
 
 export default function MarketingPage() {

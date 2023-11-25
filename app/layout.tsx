@@ -1,12 +1,11 @@
 import type { Metadata } from 'next'
 
+import './globals.css'
+
 import { inter } from '@/fonts'
 
 import { siteConfig } from '@/config/site'
-
 import { ThemeProvider } from '@/components/theme-provider'
-
-import './globals.css'
 
 export const metadata: Metadata = {
   title: {

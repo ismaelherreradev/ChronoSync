@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-
 import { headingFont } from '@/fonts'
 
 import { cn } from '@/lib/utils'

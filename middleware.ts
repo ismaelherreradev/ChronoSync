@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server'
-
 import { authMiddleware, redirectToSignIn } from '@clerk/nextjs'
 
 // This example protects all routes including api/trpc routes
