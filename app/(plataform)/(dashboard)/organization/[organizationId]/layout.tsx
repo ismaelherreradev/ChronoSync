@@ -1,4 +1,4 @@
-import { OrgControl } from "./_components/org-control"
+import { OrgControl } from './_components/org-control'
 
 export default function OrganizationIdLayout({
   children,

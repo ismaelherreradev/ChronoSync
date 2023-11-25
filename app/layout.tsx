@@ -1,19 +1,23 @@
-import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
-import { siteConfig } from "@/config/site"
-import { inter } from "@/fonts"
-import type { Metadata } from "next"
+import type { Metadata } from 'next'
+
+import { inter } from '@/fonts'
+
+import { siteConfig } from '@/config/site'
+
+import { ThemeProvider } from '@/components/theme-provider'
+
+import './globals.css'
 
 export const metadata: Metadata = {
   title: {
     default: siteConfig.title,
-    template: "%s | " + siteConfig.title,
+    template: '%s | ' + siteConfig.title,
   },
   description: siteConfig.description,
   icons: [
     {
-      url: "/logo.svg",
-      href: "/logo.svg",
+      url: '/logo.svg',
+      href: '/logo.svg',
     },
   ],
 }

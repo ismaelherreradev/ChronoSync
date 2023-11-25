@@ -1,7 +1,9 @@
-import Logo from "@/components/logo"
-import { Button } from "@/components/ui/button"
-import { OrganizationSwitcher, UserButton } from "@clerk/nextjs"
-import { Plus } from "lucide-react"
+import { OrganizationSwitcher, UserButton } from '@clerk/nextjs'
+import { Plus } from 'lucide-react'
+
+import { Button } from '@/components/ui/button'
+
+import Logo from '@/components/logo'
 
 export function Navbar() {
   return (
@@ -29,9 +31,9 @@ export function Navbar() {
           appearance={{
             elements: {
               rootBox: {
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
               },
             },
           }}
@@ -41,8 +43,8 @@ export function Navbar() {
           appearance={{
             elements: {
               avatarBox: {
-                height: "30px",
-                width: "30px",
+                height: '30px',
+                width: '30px',
               },
             },
           }}

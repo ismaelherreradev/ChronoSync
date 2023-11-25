@@ -1,7 +1,9 @@
-import { headingFont } from "@/fonts"
-import { cn } from "@/lib/utils"
-import Image from "next/image"
-import Link from "next/link"
+import Image from 'next/image'
+import Link from 'next/link'
+
+import { headingFont } from '@/fonts'
+
+import { cn } from '@/lib/utils'
 
 export default function Logo() {
   return (
@@ -14,7 +16,7 @@ export default function Logo() {
           height={40}
           className="mr-2"
         />
-        <p className={cn("pb-1 text-lg", headingFont.className)}>Taskify</p>
+        <p className={cn('pb-1 text-lg', headingFont.className)}>Taskify</p>
       </div>
     </Link>
   )

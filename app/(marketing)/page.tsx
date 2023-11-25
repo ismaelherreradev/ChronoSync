@@ -1,15 +1,18 @@
-import { Button } from "@/components/ui/button"
-import { headingFont, textFont } from "@/fonts"
-import { cn } from "@/lib/utils"
-import { Medal } from "lucide-react"
-import Link from "next/link"
+import Link from 'next/link'
+
+import { headingFont, textFont } from '@/fonts'
+import { Medal } from 'lucide-react'
+
+import { cn } from '@/lib/utils'
+
+import { Button } from '@/components/ui/button'
 
 export default function MarketingPage() {
   return (
     <div className="flex flex-col items-center  justify-center">
       <div
         className={cn(
-          "flex flex-col items-center justify-center",
+          'flex flex-col items-center justify-center',
           headingFont.className
         )}
       >
@@ -26,7 +29,7 @@ export default function MarketingPage() {
       </div>
       <div
         className={cn(
-          "text-muted-foreground mx-auto mt-4 max-w-xs text-center text-sm md:max-w-2xl md:text-xl",
+          'mx-auto mt-4 max-w-xs text-center text-sm text-muted-foreground md:max-w-2xl md:text-xl',
           textFont.className
         )}
       >

@@ -1,12 +1,28 @@
 /** @type {import('prettier').Config} */
 module.exports = {
-  endOfLine: "lf",
+  endOfLine: 'lf',
   semi: false,
-  singleQuote: false,
+  singleQuote: true,
   tabWidth: 2,
-  trailingComma: "es5",
-  plugins: [
-    "@ianvs/prettier-plugin-sort-imports",
-    "@trivago/prettier-plugin-sort-imports"
+  trailingComma: 'es5',
+  plugins: [require('@trivago/prettier-plugin-sort-imports')],
+  importOrder: [
+    '^(react/(.*)$)|^(react$)',
+    '^(next/(.*)$)|^(next$)',
+    '<THIRD_PARTY_MODULES>',
+    '^types$',
+    '^@/types/(.*)$',
+    '^@/config/(.*)$',
+    '^@/lib/(.*)$',
+    '^@/hooks/(.*)$',
+    '^@/components/ui/(.*)$',
+    '^@/components/(.*)$',
+    '^@/registry/(.*)$',
+    '^@/styles/(.*)$',
+    '^@/app/(.*)$',
+    '^[./]',
   ],
+  importOrderSeparation: true,
+  importOrderSortSpecifiers: true,
+  importOrderParserPlugins: ['typescript', 'jsx', 'decorators-legacy'],
 }

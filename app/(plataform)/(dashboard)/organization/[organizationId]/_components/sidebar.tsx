@@ -1,12 +1,13 @@
-"use client"
+'use client'
 
-import { Plus } from "lucide-react"
-import Link from "next/link"
+import Link from 'next/link'
+
+import { Plus } from 'lucide-react'
 
 type SidebarProps = {
   storageKey?: string
 }
 
-export function Sidebar({ storageKey = "sidebar" }: SidebarProps) {
+export function Sidebar({ storageKey = 'sidebar' }: SidebarProps) {
   return <>Sidbar</>
 }

@@ -1,5 +1,5 @@
-import { ClerkProvider } from "@clerk/nextjs"
-import { dark } from "@clerk/themes"
+import { ClerkProvider } from '@clerk/nextjs'
+import { dark } from '@clerk/themes'
 
 export default function PlataformLayout({
   children,
