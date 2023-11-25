@@ -1,7 +1,3 @@
-export default function OrganizationIdPage({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function OrganizationIdPage() {
   return <div>Organization Page!</div>
 }

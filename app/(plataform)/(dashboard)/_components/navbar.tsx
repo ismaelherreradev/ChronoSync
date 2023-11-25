@@ -5,7 +5,7 @@ import { Plus } from "lucide-react"
 
 export function Navbar() {
   return (
-    <div className="item-center fixed top-0 z-50 flex h-14 w-full border-b px-4">
+    <div className="fixed top-0 z-50 flex h-14 w-full items-center border-b px-4">
       <div className="flex items-center gap-x-4">
         <div className="hidden md:flex">
           <Logo />
