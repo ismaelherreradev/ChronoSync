@@ -4,8 +4,6 @@ import { cn } from "@/lib/utils"
 import { Medal } from "lucide-react"
 import Link from "next/link"
 
-
-
 export default function MarketingPage() {
   return (
     <div className="flex flex-col items-center  justify-center">
