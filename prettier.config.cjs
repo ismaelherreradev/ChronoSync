@@ -1,11 +1,14 @@
 /** @type {import('prettier').Config} */
-module.exports = {
+const config = {
   endOfLine: 'lf',
   semi: false,
   singleQuote: true,
   tabWidth: 2,
   trailingComma: 'es5',
   importOrder: [
+    'use client',
+    'use server',
+    '',
     '^(react/(.*)$)|^(react$)',
     '^(next/(.*)$)|^(next$)',
     '<THIRD_PARTY_MODULES>',
@@ -28,5 +31,7 @@ module.exports = {
   importOrderBuiltinModulesToTop: true,
   importOrderParserPlugins: ['typescript', 'jsx', 'decorators-legacy'],
   importOrderTypeScriptVersion: '5.3.2',
-  plugins: [require('@ianvs/prettier-plugin-sort-imports')],
+  plugins: ['@ianvs/prettier-plugin-sort-imports'],
 }
+
+module.exports = config

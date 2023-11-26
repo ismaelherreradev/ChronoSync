@@ -1,3 +1,7 @@
 export default function OrganizationIdPage() {
-  return <div>Organization Page!</div>
+  return (
+    <div>
+      <form>i</form>
+    </div>
+  )
 }
