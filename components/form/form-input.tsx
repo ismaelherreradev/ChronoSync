@@ -15,10 +15,7 @@ interface FormInputProps extends InputProps {
 }
 
 const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
-  (
-    { className, label, type, errors, id, disabled, ...props },
-    ref
-  ) => {
+  ({ className, label, type, errors, id, disabled, ...props }, ref) => {
     const { pending } = useFormStatus()
 
     return (

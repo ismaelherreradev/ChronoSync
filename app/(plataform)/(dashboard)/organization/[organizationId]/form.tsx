@@ -18,8 +18,10 @@ export default function Form() {
 
   function onSubmit(formData: FormData) {
     const title = formData.get('title') as string
-    
-    execute({ title })
+
+    console.log(title)
+
+    // execute({ title })
   }
 
   return (
