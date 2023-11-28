@@ -35,9 +35,7 @@ export function useAction<TInput, TOutput>(
           return
         }
 
-        if (result.fieldErrors) {
-          setFieldErrors(result.fieldErrors)
-        }
+        setFieldErrors(result.fieldErrors)
 
         if (result.error) {
           setError(result.error)
@@ -57,10 +55,10 @@ export function useAction<TInput, TOutput>(
   )
 
   return {
-    fieldErrors,
-    error,
+    execute,
     data,
     isLoading,
-    execute,
+    error,
+    fieldErrors,
   }
 }

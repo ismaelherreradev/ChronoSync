@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils'
 import { Input, InputProps } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 
-import FormErrors from './form-errors'
+import { FormErrors } from './form-errors'
 
 interface FormInputProps extends InputProps {
   label?: string
@@ -15,7 +15,7 @@ interface FormInputProps extends InputProps {
 }
 
 const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
-  ({ className, label, type, errors, id, disabled, ...props }, ref) => {
+  ({ className, label, errors, id, disabled, ...props }, ref) => {
     const { pending } = useFormStatus()
 
     return (
@@ -29,14 +29,14 @@ const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
           <Input
             ref={ref}
             id={id}
-            type={type}
+            name={id}
             disabled={pending || disabled}
             className={cn('h-7 px-2 py-1 text-sm', className)}
             aria-describedby={`${id}-error`}
             {...props}
           />
         </div>
-        <FormErrors id={id} errors={errors} />
+        <FormErrors id={id!} errors={errors} />
       </div>
     )
   }
