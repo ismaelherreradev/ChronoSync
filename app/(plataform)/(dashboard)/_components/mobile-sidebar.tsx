@@ -8,7 +8,7 @@ import { useMobileSidebar } from '@/hooks/use-mobile-sidebar'
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent } from '@/components/ui/sheet'
 
-import { Sidebar } from '../organization/[organizationId]/_components/sidebar'
+import { Sidebar } from './sidebar'
 
 export function MobileSidebar() {
   const pathnbame = usePathname()

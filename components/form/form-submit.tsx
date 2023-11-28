@@ -9,10 +9,14 @@ export function FormSubmit({
   variant,
   children,
   size,
+  disabled,
   className,
 }: ButtonProps & { children: React.ReactNode }) {
+  const { pending } = useFormStatus()
+
   return (
     <Button
+      disabled={pending || disabled}
       type="submit"
       variant={variant}
       size={size}
