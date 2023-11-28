@@ -1,8 +1,9 @@
 'use client'
 
 import { type PropsWithChildren } from 'react'
-import { CreateBoard } from '@/actions/create-board/schema'
+import { createBoard } from '@/actions/create-board'
 import { X } from 'lucide-react'
+import { toast } from 'sonner'
 
 import { useAction } from '@/hooks/use-action'
 import { Button } from '@/components/ui/button'
@@ -27,6 +28,21 @@ export function FormPopover({
   side = 'bottom',
   sideOffset = 0,
 }: PropsWithChildren<FormPopoverProps>) {
+  const { execute, fieldErrors } = useAction(createBoard, {
+    onSuccess: () => {
+      toast.success('Board created')
+    },
+    onError: (error) => {
+      toast.error(error)
+    },
+  })
+
+  function onSubmit(formdata: FormData) {
+    const title = formdata.get('title') as string
+
+    execute({ title })
+  }
+
   return (
     <Popover>
       <PopoverTrigger asChild>{children}</PopoverTrigger>
@@ -42,7 +58,17 @@ export function FormPopover({
             <X className="h-4 w-4" />
           </Button>
         </PopoverClose>
-        <form></form>
+        <form action={onSubmit} className="space-y-4">
+          <div className="space-y-4">
+            <FormInput
+              id="title"
+              label="Board title"
+              type="text"
+              errors={fieldErrors}
+            />
+          </div>
+          <FormSubmit className="w-full">Create</FormSubmit>
+        </form>
       </PopoverContent>
     </Popover>
   )
