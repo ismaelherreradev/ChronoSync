@@ -2,12 +2,15 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { defaultImages } from '@/constants/images'
-import { Loader2 } from 'lucide-react'
+import { Check, Loader2 } from 'lucide-react'
 import { useFormStatus } from 'react-dom'
 
 import { unsplash } from '@/lib/unsplash'
 import { cn } from '@/lib/utils'
+
+import { FormErrors } from './form-errors'
 
 type FormPickerProps = {
   id: string
@@ -62,7 +65,7 @@ export default function FormPicker({ id, errors }: FormPickerProps) {
           <div
             key={image.id}
             className={cn(
-              'group relative aspect-video cursor-pointer bg-muted transition hover:opacity-75',
+              'group relative aspect-video cursor-pointer  bg-muted transition hover:opacity-75',
               pending && 'cursor-auto opacity-50 hover:opacity-50'
             )}
             onClick={() => {
@@ -70,15 +73,37 @@ export default function FormPicker({ id, errors }: FormPickerProps) {
               setSelectedImageId(image.id)
             }}
           >
+            <input
+              type="radio"
+              id={id}
+              name={id}
+              className="hidden"
+              checked={selectedImageId === image.id}
+              disabled={pending}
+              value={`${image.id}|${image.urls.thumb}|${image.urls.full}|${image.links.html}|${image.user.name}`}
+            />
             <Image
               src={image.urls.small}
               alt={image.alt_description}
               fill
-              className="rounded-md object-cover"
+              className="overflow-hidden rounded-md object-cover"
             />
+            {selectedImageId === image.id && (
+              <div className="absolute inset-y-0 flex h-full w-full items-center justify-center bg-black/30">
+                <Check className="h-4 w-4 text-white" />
+              </div>
+            )}
+            <Link
+              href={image.links.html}
+              target="_blank"
+              className="absolute bottom-0 w-full truncate bg-black/50 p-1 text-[10px] opacity-0 hover:underline group-hover:opacity-100"
+            >
+              {image.user.name}
+            </Link>
           </div>
         ))}
       </div>
+      <FormErrors errors={errors} id="image" />
     </div>
   )
 }

@@ -40,8 +40,10 @@ export function FormPopover({
 
   function onSubmit(formdata: FormData) {
     const title = formdata.get('title') as string
+    const iamge = formdata.get('image') as string
 
-    execute({ title })
+    console.log(title, {iamge})
+    // execute({ title })
   }
 
   return (
