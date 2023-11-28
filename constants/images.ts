@@ -21,8 +21,7 @@ export const defaultImages = [
         'https://images.unsplash.com/photo-1658604663578-04634f4cb897?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3w1MzM4Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDExNDM5MDd8\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400',
       thumb:
         'https://images.unsplash.com/photo-1658604663578-04634f4cb897?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3w1MzM4Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDExNDM5MDd8\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=200',
-      small_s3:
-        'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1658604663578-04634f4cb897',
+      small_s3: 'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1658604663578-04634f4cb897',
     },
     links: {
       self: 'https://api.unsplash.com/photos/a-close-up-of-a-white-circle-YLplJ9m_RKE',
@@ -135,8 +134,7 @@ export const defaultImages = [
         'https://images.unsplash.com/photo-1505357957917-ed2e269a1b47?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3w1MzM4Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDExNDM5MDd8\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400',
       thumb:
         'https://images.unsplash.com/photo-1505357957917-ed2e269a1b47?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3w1MzM4Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDExNDM5MDd8\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=200',
-      small_s3:
-        'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1505357957917-ed2e269a1b47',
+      small_s3: 'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1505357957917-ed2e269a1b47',
     },
     links: {
       self: 'https://api.unsplash.com/photos/blue-and-red-cubist-building-lRtzEExP0H8',
@@ -245,8 +243,7 @@ export const defaultImages = [
         'https://images.unsplash.com/photo-1554068085-a071e3fcf41b?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3w1MzM4Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDExNDM5MDd8\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400',
       thumb:
         'https://images.unsplash.com/photo-1554068085-a071e3fcf41b?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3w1MzM4Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDExNDM5MDd8\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=200',
-      small_s3:
-        'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1554068085-a071e3fcf41b',
+      small_s3: 'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1554068085-a071e3fcf41b',
     },
     links: {
       self: 'https://api.unsplash.com/photos/lake-surrounded-by-houses-and-mountains-7z9ByavTdH8',
@@ -346,8 +343,7 @@ export const defaultImages = [
         'https://images.unsplash.com/photo-1631390818669-aab06df2fd33?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3w1MzM4Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDExNDM5MDd8\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400',
       thumb:
         'https://images.unsplash.com/photo-1631390818669-aab06df2fd33?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3w1MzM4Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDExNDM5MDd8\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=200',
-      small_s3:
-        'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1631390818669-aab06df2fd33',
+      small_s3: 'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1631390818669-aab06df2fd33',
     },
     links: {
       self: 'https://api.unsplash.com/photos/brown-sand-under-blue-sky-during-daytime-fsIocVv2H-Y',
@@ -451,8 +447,7 @@ export const defaultImages = [
         'https://images.unsplash.com/photo-1609770986423-17eefd90fcc8?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3w1MzM4Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDExNDM5MDd8\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400',
       thumb:
         'https://images.unsplash.com/photo-1609770986423-17eefd90fcc8?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3w1MzM4Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDExNDM5MDd8\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=200',
-      small_s3:
-        'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1609770986423-17eefd90fcc8',
+      small_s3: 'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1609770986423-17eefd90fcc8',
     },
     links: {
       self: 'https://api.unsplash.com/photos/brown-rocky-mountain-with-snow-fUyp61KEMD4',
@@ -571,8 +566,7 @@ export const defaultImages = [
         'https://images.unsplash.com/photo-1549912870-27ef075b64ae?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3w1MzM4Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDExNDM5MDd8\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400',
       thumb:
         'https://images.unsplash.com/photo-1549912870-27ef075b64ae?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3w1MzM4Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDExNDM5MDd8\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=200',
-      small_s3:
-        'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1549912870-27ef075b64ae',
+      small_s3: 'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1549912870-27ef075b64ae',
     },
     links: {
       self: 'https://api.unsplash.com/photos/white-clouds-jtVFv8mDDBU',
@@ -678,8 +672,7 @@ export const defaultImages = [
         'https://images.unsplash.com/photo-1524169358666-79f22534bc6e?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3w1MzM4Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDExNDM5MDd8\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400',
       thumb:
         'https://images.unsplash.com/photo-1524169358666-79f22534bc6e?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3w1MzM4Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDExNDM5MDd8\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=200',
-      small_s3:
-        'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1524169358666-79f22534bc6e',
+      small_s3: 'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1524169358666-79f22534bc6e',
     },
     links: {
       self: 'https://api.unsplash.com/photos/blue-and-red-triangles-wallpaper-0aWZdK8nK2I',
@@ -788,8 +781,7 @@ export const defaultImages = [
         'https://images.unsplash.com/photo-1673217611194-579eee2a6ff8?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3w1MzM4Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDExNDM5MDd8\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400',
       thumb:
         'https://images.unsplash.com/photo-1673217611194-579eee2a6ff8?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3w1MzM4Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDExNDM5MDd8\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=200',
-      small_s3:
-        'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1673217611194-579eee2a6ff8',
+      small_s3: 'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1673217611194-579eee2a6ff8',
     },
     links: {
       self: 'https://api.unsplash.com/photos/a-snow-covered-mountain-with-trees-in-the-foreground-2g-x5FWRh6Q',
@@ -898,8 +890,7 @@ export const defaultImages = [
         'https://images.unsplash.com/photo-1629102065948-9e4b31a83fa5?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3w1MzM4Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDExNDM5MDd8\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=400',
       thumb:
         'https://images.unsplash.com/photo-1629102065948-9e4b31a83fa5?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=M3w1MzM4Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDExNDM5MDd8\u0026ixlib=rb-4.0.3\u0026q=80\u0026w=200',
-      small_s3:
-        'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1629102065948-9e4b31a83fa5',
+      small_s3: 'https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1629102065948-9e4b31a83fa5',
     },
     links: {
       self: 'https://api.unsplash.com/photos/red-and-purple-abstract-painting-J4giiOPcT-w',

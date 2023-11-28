@@ -30,12 +30,7 @@ export function MobileSidebar() {
 
   return (
     <>
-      <Button
-        onClick={onOpen}
-        className="block md:hidden"
-        variant="ghost"
-        size="sm"
-      >
+      <Button onClick={onOpen} className="block md:hidden" variant="ghost" size="sm">
         <Menu className="mr-2 h-4 w-4" />
       </Button>
       <Sheet open={isOpen} onOpenChange={onClose}>

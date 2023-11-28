@@ -3,11 +3,7 @@ import { usePathname, useRouter } from 'next/navigation'
 import { Activity, Layout, Settings } from 'lucide-react'
 
 import { cn } from '@/lib/utils'
-import {
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion'
+import { AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { Button } from '@/components/ui/button'
 import { Skeleton } from '@/components/ui/skeleton'
 
@@ -25,12 +21,7 @@ type NavItemProps = {
   onExpand: (id: string) => void
 }
 
-export function NavItem({
-  organization,
-  isActive,
-  isExpanded,
-  onExpand,
-}: NavItemProps) {
+export function NavItem({ organization, isActive, isExpanded, onExpand }: NavItemProps) {
   const router = useRouter()
   const pathname = usePathname()
 
@@ -72,12 +63,7 @@ export function NavItem({
       >
         <div className="flex items-center gap-x-2">
           <div className="relative h-7 w-7">
-            <Image
-              fill
-              src={organization.imageUrl}
-              alt={organization.name}
-              className="rounded-sm object-cover"
-            />
+            <Image fill src={organization.imageUrl} alt={organization.name} className="rounded-sm object-cover" />
           </div>
           <span className="text-sm font-medium">{organization.name}</span>
         </div>

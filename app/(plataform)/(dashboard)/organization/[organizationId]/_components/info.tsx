@@ -16,12 +16,7 @@ export function Info() {
   return (
     <div className="item-center flex gap-x-4">
       <div className="relative h-[60px] w-[60px]">
-        <Image
-          fill
-          src={organization?.imageUrl!}
-          alt={organization?.name!}
-          className="rounded-md object-cover"
-        />
+        <Image fill src={organization?.imageUrl!} alt={organization?.name!} className="rounded-md object-cover" />
       </div>
       <div className="space-y-1">
         <p className="text-xl font-semibold">{organization?.name}</p>
