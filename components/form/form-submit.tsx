@@ -15,7 +15,13 @@ export function FormSubmit({
   const { pending } = useFormStatus()
 
   return (
-    <Button disabled={pending || disabled} type="submit" variant={variant} size={size} className={cn(className)}>
+    <Button
+      disabled={pending || disabled}
+      type="submit"
+      variant={variant}
+      size={size}
+      className={cn(className)}
+    >
       {children}
     </Button>
   )

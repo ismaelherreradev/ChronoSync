@@ -22,9 +22,16 @@ export default async function handler(data: InputType): Promise<ReturnType> {
 
   const { title, image } = data
 
-  const [imageId, imageThumbUrl, imageFullUrl, imageLinkHTML, imageUserName] = image.split('|')
+  const [imageId, imageThumbUrl, imageFullUrl, imageLinkHTML, imageUserName] =
+    image.split('|')
 
-  if (!imageId || !imageThumbUrl || !imageFullUrl || !imageUserName || !imageLinkHTML) {
+  if (
+    !imageId ||
+    !imageThumbUrl ||
+    !imageFullUrl ||
+    !imageUserName ||
+    !imageLinkHTML
+  ) {
     return {
       error: 'Missing fields. Failed to create board.',
     }

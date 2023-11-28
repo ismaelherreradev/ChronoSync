@@ -1,4 +1,9 @@
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './ui/tooltip'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from './ui/tooltip'
 
 type HintProps = {
   children: React.ReactNode
@@ -7,12 +12,21 @@ type HintProps = {
   sideOffset?: number
 }
 
-export function Hint({ children, description, side = 'bottom', sideOffset = 0 }: HintProps) {
+export function Hint({
+  children,
+  description,
+  side = 'bottom',
+  sideOffset = 0,
+}: HintProps) {
   return (
     <TooltipProvider>
       <Tooltip delayDuration={0}>
         <TooltipTrigger>{children}</TooltipTrigger>
-        <TooltipContent side={side} sideOffset={sideOffset} className="max-w-[220px] break-words text-xs">
+        <TooltipContent
+          side={side}
+          sideOffset={sideOffset}
+          className="max-w-[220px] break-words text-xs"
+        >
           {description}
         </TooltipContent>
       </Tooltip>
