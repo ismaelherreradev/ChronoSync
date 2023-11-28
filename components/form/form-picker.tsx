@@ -78,6 +78,7 @@ export default function FormPicker({ id, errors }: FormPickerProps) {
               id={id}
               name={id}
               className="hidden"
+              onChange={() => (selectedImageId === image.id ? null : null)}
               checked={selectedImageId === image.id}
               disabled={pending}
               value={`${image.id}|${image.urls.thumb}|${image.urls.full}|${image.links.html}|${image.user.name}`}
