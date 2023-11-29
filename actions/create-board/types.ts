@@ -1,4 +1,4 @@
-import { Board } from '@prisma/client/edge'
+import { Board } from '@prisma/client'
 import { z } from 'zod'
 
 import { ActionState } from '../../lib/create-safe-action'
