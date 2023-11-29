@@ -9,7 +9,7 @@ import { MobileSidebar } from './mobile-sidebar'
 
 export function Navbar() {
   return (
-    <nav className="fixed top-0 z-50 flex h-14 w-full items-center border-b px-4">
+    <nav className="fixed top-0 z-50 flex h-14 w-full items-center border-b bg-background px-4">
       <MobileSidebar />
       <div className="flex items-center gap-x-4">
         <div className="hidden md:flex">
