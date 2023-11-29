@@ -1,8 +1,11 @@
 'use client'
 
 import { ElementRef, useRef, useState } from 'react'
+import { updateBoard } from '@/actions/update-board'
 import { type Board } from '@prisma/client'
+import { toast } from 'sonner'
 
+import { useAction } from '@/hooks/use-action'
 import { Button } from '@/components/ui/button'
 import { FormInput } from '@/components/form/form-input'
 
@@ -11,10 +14,22 @@ type BoardTitleFormProps = {
 }
 
 export function BoardTitleForm({ data }: BoardTitleFormProps) {
+  const { execute } = useAction(updateBoard, {
+    onSuccess: (data) => {
+      toast.success(`Board "${data.title}" updated!`)
+      setTitle(data.title)
+      disableEditing()
+    },
+    onError: (error) => {
+      toast.error(error)
+    },
+  })
+
   const formRef = useRef<ElementRef<'form'>>(null)
   const inputRef = useRef<ElementRef<'input'>>(null)
 
   const [isEditing, setIsEditing] = useState(false)
+  const [title, setTitle] = useState(data.title)
 
   function enableEditingTimeout() {
     const timeoutId = setTimeout(() => {
@@ -40,7 +55,11 @@ export function BoardTitleForm({ data }: BoardTitleFormProps) {
     if (title === data.title) {
       return disableEditing()
     }
-    console.log(title)
+
+    execute({
+      id: data.id,
+      title,
+    })
   }
 
   function onBlur() {
@@ -58,7 +77,7 @@ export function BoardTitleForm({ data }: BoardTitleFormProps) {
           ref={inputRef}
           id="title"
           onBlur={onBlur}
-          defaultValue={data.title}
+          defaultValue={title}
           className="h-7 border-none border-ring bg-transparent px-[7px] py-1 text-lg font-bold focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-transparent "
         />
       </form>
@@ -71,7 +90,7 @@ export function BoardTitleForm({ data }: BoardTitleFormProps) {
       variant={'transparent'}
       className="h-auto w-auto p-1 px-2 text-lg font-bold"
     >
-      {data.title}
+      {title}
     </Button>
   )
 }

@@ -60,7 +60,7 @@ export default async function BoardLayout({ children, params }: Props) {
       className="relative h-full bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${board.imageFullUrl})` }}
     >
-      <BoardNavbar data={board}/>
+      <BoardNavbar data={board} />
       <main className="relative h-screen pt-28">{children}</main>
     </div>
   )
