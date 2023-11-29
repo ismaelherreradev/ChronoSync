@@ -4,11 +4,38 @@ import { auth } from '@clerk/nextjs'
 
 import { db } from '@/lib/db'
 
+import { BoardNavbar } from './_components/board-navbar'
+
 type Props = PropsWithChildren<{
   params: {
     boardId: string
   }
 }>
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { boardId: string }
+}) {
+  const { orgId } = auth()
+
+  if (!orgId) {
+    return {
+      title: 'Board',
+    }
+  }
+
+  const board = await db.board.findUnique({
+    where: {
+      id: params.boardId,
+      orgId,
+    },
+  })
+
+  return {
+    title: board?.title || 'Board',
+  }
+}
 
 export default async function BoardLayout({ children, params }: Props) {
   const { orgId } = auth()
@@ -30,10 +57,11 @@ export default async function BoardLayout({ children, params }: Props) {
 
   return (
     <div
-      className="relative h-screen bg-cover bg-center bg-no-repeat"
+      className="relative h-full bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${board.imageFullUrl})` }}
     >
-      <main className="relative h-full pt-28">{children}</main>
+      <BoardNavbar data={board}/>
+      <main className="relative h-screen pt-28">{children}</main>
     </div>
   )
 }
