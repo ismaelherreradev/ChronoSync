@@ -11,7 +11,7 @@ import { db } from '@/lib/db'
 import { CreateBoard } from './schema'
 import type { InputType, ReturnType } from './types'
 
-export default async function handler(data: InputType): Promise<ReturnType> {
+export async function handler(data: InputType): Promise<ReturnType> {
   const { userId, orgId } = auth()
 
   if (!userId || !orgId) {
