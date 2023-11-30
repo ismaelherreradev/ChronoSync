@@ -1,6 +1,6 @@
 import { type Board } from '@prisma/client'
 
-import { db } from '@/lib/db'
+import { prisma } from '@/lib/db'
 
 import { BoardOptions } from './board-options'
 import { BoardTitleForm } from './board-title-form'

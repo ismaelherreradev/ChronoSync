@@ -4,7 +4,7 @@ import { revalidatePath } from 'next/cache'
 import { auth } from '@clerk/nextjs'
 
 import { createSafeAction } from '@/lib/create-safe-action'
-import { db } from '@/lib/db'
+import { prisma } from '@/lib/db'
 
 import { UpdateBoard } from './schema'
 import { InputType, ReturnType } from './types'
@@ -23,7 +23,7 @@ async function handler(data: InputType): Promise<ReturnType> {
   let board
 
   try {
-    board = await db.board.update({
+    board = await prisma.board.update({
       where: {
         id,
         orgId,

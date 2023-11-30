@@ -2,7 +2,7 @@ import { type PropsWithChildren } from 'react'
 import { notFound, redirect } from 'next/navigation'
 import { auth } from '@clerk/nextjs'
 
-import { db } from '@/lib/db'
+import { prisma } from '@/lib/db'
 
 import { BoardNavbar } from './_components/board-navbar'
 
@@ -25,7 +25,7 @@ export async function generateMetadata({
     }
   }
 
-  const board = await db.board.findUnique({
+  const board = await prisma.board.findUnique({
     where: {
       id: params.boardId,
       orgId,
@@ -44,7 +44,7 @@ export default async function BoardLayout({ children, params }: Props) {
     redirect('/select-org')
   }
 
-  const board = await db.board.findUnique({
+  const board = await prisma.board.findUnique({
     where: {
       id: params.boardId,
       orgId,

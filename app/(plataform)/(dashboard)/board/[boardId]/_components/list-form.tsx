@@ -2,6 +2,7 @@
 
 import { ElementRef, useRef, useState } from 'react'
 import { useParams, useRouter } from 'next/navigation'
+import { createList } from '@/actions/create-list'
 import { Plus, X } from 'lucide-react'
 import { toast } from 'sonner'
 import { useEventListener, useOnClickOutside } from 'usehooks-ts'
@@ -13,7 +14,18 @@ import { FormSubmit } from '@/components/form/form-submit'
 
 import { ListWrapper } from './list-wrapper'
 
-export const ListForm = () => {
+export function ListForm() {
+  const { execute, fieldErrors } = useAction(createList, {
+    onSuccess: (data) => {
+      toast.success(`List "${data.title}" created!`)
+      disableEditing()
+      router.refresh()
+    },
+    onError: (error) => {
+      toast.error(error)
+    },
+  })
+
   const router = useRouter()
   const params = useParams()
 
@@ -22,18 +34,24 @@ export const ListForm = () => {
 
   const [isEditing, setIsEditing] = useState(false)
 
-  const enableEditing = () => {
-    setIsEditing(true)
-    setTimeout(() => {
+  function enableEditingTimeout() {
+    const timeoutId = setTimeout(() => {
       inputRef.current?.focus()
     })
+
+    return () => clearTimeout(timeoutId)
   }
 
-  const disableEditing = () => {
+  function enableEditing() {
+    setIsEditing(true)
+    enableEditingTimeout()
+  }
+
+  function disableEditing() {
     setIsEditing(false)
   }
 
-  const onKeyDown = (e: KeyboardEvent) => {
+  function onKeyDown(e: KeyboardEvent) {
     if (e.key === 'Escape') {
       disableEditing()
     }
@@ -42,16 +60,28 @@ export const ListForm = () => {
   useEventListener('keydown', onKeyDown)
   useOnClickOutside(formRef, disableEditing)
 
+  function onSubmit(formData: FormData) {
+    const title = formData.get('title') as string
+    const boardId = formData.get('boardId') as string
+
+    execute({
+      title,
+      boardId,
+    })
+  }
+
   if (isEditing) {
     return (
       <ListWrapper>
         <form
+          action={onSubmit}
           ref={formRef}
-          className="w-full space-y-4 rounded-md  p-3 shadow-md"
+          className="w-full space-y-4 rounded-md  bg-muted p-3"
         >
           <FormInput
             ref={inputRef}
             id="title"
+            errors={fieldErrors}
             className="h-7 border-transparent px-2 py-1 text-sm font-medium transition hover:border-input focus:border-input"
             placeholder="Enter list title..."
           />
@@ -71,7 +101,7 @@ export const ListForm = () => {
     <ListWrapper>
       <button
         onClick={enableEditing}
-        className="rounded-mdp-3 flex w-full items-center text-sm font-medium transition"
+        className="flex  w-full items-center rounded-md bg-muted/75 p-3 text-sm font-medium transition hover:bg-muted "
       >
         <Plus className="mr-2 h-4 w-4" />
         Add a list

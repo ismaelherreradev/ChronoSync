@@ -5,7 +5,7 @@ import { redirect } from 'next/navigation'
 import { auth } from '@clerk/nextjs'
 
 import { createSafeAction } from '@/lib/create-safe-action'
-import { db } from '@/lib/db'
+import { prisma } from '@/lib/db'
 
 import { DeleteBoard } from './schema'
 import { InputType, ReturnType } from './types'
@@ -23,7 +23,7 @@ const handler = async (data: InputType): Promise<ReturnType> => {
   let board
 
   try {
-    board = await db.board.delete({
+    board = await prisma.board.delete({
       where: {
         id,
         orgId,

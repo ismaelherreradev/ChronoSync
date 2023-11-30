@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation'
 import { auth } from '@clerk/nextjs'
 
-import { db } from '@/lib/db'
+import { prisma } from '@/lib/db'
 
 import ListContainer from './_components/list-container'
 
@@ -18,7 +18,7 @@ export default async function BoardIdPage({ params }: BoardIdPageProps) {
     redirect('/select-org')
   }
 
-  const lists = await db.list.findMany({
+  const lists = await prisma.list.findMany({
     where: {
       boardId: params.boardId,
       board: {

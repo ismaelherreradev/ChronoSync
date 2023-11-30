@@ -3,7 +3,7 @@ import { redirect } from 'next/navigation'
 import { auth } from '@clerk/nextjs'
 import { HelpCircle, User2 } from 'lucide-react'
 
-import { db } from '@/lib/db'
+import { prisma } from '@/lib/db'
 import { Skeleton } from '@/components/ui/skeleton'
 import { FormPopover } from '@/components/form/form-popover'
 import { Hint } from '@/components/hint'
@@ -15,7 +15,7 @@ export async function BoardList() {
     return redirect('/select-org')
   }
 
-  const boards = await db.board.findMany({
+  const boards = await prisma.board.findMany({
     where: {
       orgId,
     },
