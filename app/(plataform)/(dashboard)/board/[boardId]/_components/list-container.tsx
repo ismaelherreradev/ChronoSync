@@ -19,7 +19,7 @@ export function ListContainer({ boardId, data }: ListContainerProps) {
   }, [data])
 
   return (
-    <ol  className="flex h-full gap-x-3">
+    <ol className="flex h-full gap-x-3">
       {orderedList.map((list, index) => {
         return <ListItem key={list.id} index={index} data={list} />
       })}

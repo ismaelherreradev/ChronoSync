@@ -6,10 +6,10 @@ import { auth } from '@clerk/nextjs'
 import { createSafeAction } from '@/lib/create-safe-action'
 import { prisma } from '@/lib/db'
 
-import { UpdateList } from './schema'
+import { DeleteList } from './schema'
 import { InputType, ReturnType } from './types'
 
-async function handler(data: InputType): Promise<ReturnType> {
+const handler = async (data: InputType): Promise<ReturnType> => {
   const { userId, orgId } = auth()
 
   if (!userId || !orgId) {
@@ -18,12 +18,12 @@ async function handler(data: InputType): Promise<ReturnType> {
     }
   }
 
-  const { title, id, boardId } = data
+  const { id, boardId } = data
 
   let list
 
   try {
-    list = await prisma.list.update({
+    list = await prisma.list.delete({
       where: {
         id,
         boardId,
@@ -31,13 +31,10 @@ async function handler(data: InputType): Promise<ReturnType> {
           orgId,
         },
       },
-      data: {
-        title,
-      },
     })
   } catch (error) {
     return {
-      error: 'Failed to update.',
+      error: 'Failed to delete.',
     }
   }
 
@@ -45,4 +42,4 @@ async function handler(data: InputType): Promise<ReturnType> {
   return { data: list }
 }
 
-export const updateList = createSafeAction(UpdateList, handler)
+export const deleteList = createSafeAction(DeleteList, handler)

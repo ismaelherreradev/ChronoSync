@@ -86,6 +86,8 @@ export default function FormPicker({ id, errors }: FormPickerProps) {
             <Image
               src={image.urls.small}
               alt={image.alt_description}
+              placeholder="blur"
+              blurDataURL={image.blur_hash}
               fill
               className="overflow-hidden rounded-md object-cover"
             />
