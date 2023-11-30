@@ -3,6 +3,7 @@
 import { ElementRef, useRef, useState } from 'react'
 import { ListWithCards } from '@/types'
 
+import { CardForm } from './card-form'
 import { ListHeader } from './list-header'
 
 type ListItemProps = {
@@ -30,6 +31,13 @@ export function ListItem({ index, data }: ListItemProps) {
     <li className="h-full w-[272px] shrink-0 select-none">
       <div className="w-full rounded-md bg-muted pb-2 shadow-md">
         <ListHeader onAddCard={enableEditing} data={data} />
+        <CardForm
+          listId={data.id}
+          ref={textareaRef}
+          isEditing={isEditing}
+          enableEditing={enableEditing}
+          disableEditing={disableEditing}
+        />
       </div>
     </li>
   )
