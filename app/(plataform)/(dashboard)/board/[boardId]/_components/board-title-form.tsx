@@ -31,18 +31,12 @@ export function BoardTitleForm({ data }: BoardTitleFormProps) {
   const [isEditing, setIsEditing] = useState(false)
   const [title, setTitle] = useState(data.title)
 
-  function enableEditingTimeout() {
-    const timeoutId = setTimeout(() => {
+  function enableEditing() {
+    setIsEditing(true)
+    setTimeout(() => {
       inputRef.current?.focus()
       inputRef.current?.select()
     })
-
-    return () => clearTimeout(timeoutId)
-  }
-
-  function enableEditing() {
-    setIsEditing(true)
-    enableEditingTimeout()
   }
 
   function disableEditing() {

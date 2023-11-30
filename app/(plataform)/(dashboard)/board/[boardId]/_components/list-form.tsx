@@ -34,17 +34,11 @@ export function ListForm() {
 
   const [isEditing, setIsEditing] = useState(false)
 
-  function enableEditingTimeout() {
-    const timeoutId = setTimeout(() => {
-      inputRef.current?.focus()
-    })
-
-    return () => clearTimeout(timeoutId)
-  }
-
   function enableEditing() {
     setIsEditing(true)
-    enableEditingTimeout()
+    setTimeout(() => {
+      inputRef.current?.focus()
+    })
   }
 
   function disableEditing() {
@@ -101,7 +95,7 @@ export function ListForm() {
     <ListWrapper>
       <button
         onClick={enableEditing}
-        className="flex  w-full items-center rounded-md bg-muted/75 p-3 text-sm font-medium transition hover:bg-muted "
+        className="flex  w-full items-center rounded-md bg-muted/75 p-3 text-sm font-medium transition hover:bg-muted"
       >
         <Plus className="mr-2 h-4 w-4" />
         Add a list

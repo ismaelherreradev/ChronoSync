@@ -3,7 +3,7 @@ import { auth } from '@clerk/nextjs'
 
 import { prisma } from '@/lib/db'
 
-import ListContainer from './_components/list-container'
+import { ListContainer } from './_components/list-container'
 
 type BoardIdPageProps = {
   params: {
