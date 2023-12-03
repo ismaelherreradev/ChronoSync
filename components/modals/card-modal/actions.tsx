@@ -61,7 +61,12 @@ export function Actions({ data }: ActionsProps) {
   return (
     <div className="mt-2 space-y-2">
       <p className="text-xs font-semibold">Actions</p>
-      <Button onClick={onCopy} disabled={isLoadingCopy} className="w-full justify-start">
+      <Button
+        onClick={onCopy}
+        disabled={isLoadingCopy}
+        className="w-full justify-start"
+        size="inline"
+      >
         <Copy className="mr-2 h-4 w-4" />
         Copy
       </Button>
@@ -70,6 +75,7 @@ export function Actions({ data }: ActionsProps) {
         disabled={isLoadingDelete}
         className="w-full justify-start"
         variant="destructive"
+        size="inline"
       >
         <Trash className="mr-2 h-4 w-4" />
         Delete
