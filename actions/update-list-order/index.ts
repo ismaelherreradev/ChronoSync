@@ -19,7 +19,7 @@ async function handler(data: InputType): Promise<ReturnType> {
   }
 
   const { items, boardId } = data
-  
+
   let lists
 
   try {
