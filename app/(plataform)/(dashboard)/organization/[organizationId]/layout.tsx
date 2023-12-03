@@ -12,11 +12,7 @@ export async function generateMetadata() {
   }
 }
 
-export default function OrganizationIdLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function OrganizationIdLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <OrgControl />

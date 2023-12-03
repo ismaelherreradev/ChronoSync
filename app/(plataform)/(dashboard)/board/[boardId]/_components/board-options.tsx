@@ -6,12 +6,7 @@ import { toast } from 'sonner'
 
 import { useAction } from '@/hooks/use-action'
 import { Button } from '@/components/ui/button'
-import {
-  Popover,
-  PopoverClose,
-  PopoverContent,
-  PopoverTrigger,
-} from '@/components/ui/popover'
+import { Popover, PopoverClose, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 
 type BoardOptionsProps = {
   id: string
@@ -36,9 +31,7 @@ export function BoardOptions({ id }: BoardOptionsProps) {
         </Button>
       </PopoverTrigger>
       <PopoverContent className="px-0 py-3" side="bottom" align="start">
-        <div className="pb-4 text-center text-sm font-medium text-neutral-600">
-          Board actions
-        </div>
+        <div className="pb-4 text-center text-sm font-medium text-neutral-600">Board actions</div>
         <PopoverClose asChild>
           <Button
             className="absolute right-2 top-2 h-auto w-auto p-2 text-neutral-600"

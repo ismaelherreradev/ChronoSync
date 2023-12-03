@@ -9,11 +9,7 @@ export function FormErrors({ id, errors }: FormErrorsProps) {
   if (!errors) return null
 
   return (
-    <div
-      id={`${id}-error`}
-      aria-live="polite"
-      className="mt-2 text-xs text-rose-500"
-    >
+    <div id={`${id}-error`} aria-live="polite" className="mt-2 text-xs text-rose-500">
       {errors?.[id]?.map((error: string) => (
         <div
           key={error}

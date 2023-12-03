@@ -62,11 +62,7 @@ export function BoardTitleForm({ data }: BoardTitleFormProps) {
 
   if (isEditing) {
     return (
-      <form
-        action={onSumit}
-        ref={formRef}
-        className="flex items-center gap-x-2"
-      >
+      <form action={onSumit} ref={formRef} className="flex items-center gap-x-2">
         <FormInput
           ref={inputRef}
           id="title"

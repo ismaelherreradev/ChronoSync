@@ -46,10 +46,7 @@ export const FormTextarea = forwardRef<HTMLTextAreaElement, FormTextareaProps>(
       <div className="w-full space-y-2">
         <div className="w-full space-y-1">
           {label ? (
-            <Label
-              htmlFor={id}
-              className="text-xs font-semibold text-neutral-700"
-            >
+            <Label htmlFor={id} className="text-xs font-semibold text-neutral-700">
               {label}
             </Label>
           ) : null}

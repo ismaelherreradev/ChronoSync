@@ -60,11 +60,7 @@ export const CardForm = forwardRef<HTMLTextAreaElement, CardFormProps>(
 
     if (isEditing) {
       return (
-        <form
-          ref={formRef}
-          action={onSubmit}
-          className="m-1 space-y-4 px-1 py-0.5"
-        >
+        <form ref={formRef} action={onSubmit} className="m-1 space-y-4 px-1 py-0.5">
           <FormTextarea
             id="title"
             onKeyDown={onTextareakeyDown}

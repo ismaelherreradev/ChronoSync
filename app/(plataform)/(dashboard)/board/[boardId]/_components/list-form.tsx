@@ -67,11 +67,7 @@ export function ListForm() {
   if (isEditing) {
     return (
       <ListWrapper>
-        <form
-          action={onSubmit}
-          ref={formRef}
-          className="w-full space-y-4 rounded-md  bg-muted p-3"
-        >
+        <form action={onSubmit} ref={formRef} className="w-full space-y-4 rounded-md  bg-muted p-3">
           <FormInput
             ref={inputRef}
             id="title"

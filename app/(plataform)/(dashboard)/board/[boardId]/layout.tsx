@@ -12,11 +12,7 @@ type Props = PropsWithChildren<{
   }
 }>
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { boardId: string }
-}) {
+export async function generateMetadata({ params }: { params: { boardId: string } }) {
   const { orgId } = auth()
 
   if (!orgId) {

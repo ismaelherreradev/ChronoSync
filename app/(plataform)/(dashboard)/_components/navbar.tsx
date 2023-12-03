@@ -16,10 +16,7 @@ export function Navbar() {
           <Logo />
         </div>
         <FormPopover align="start" side="bottom" sideOffset={18}>
-          <Button
-            size="sm"
-            className="hidden h-auto rounded-sm px-2 py-1.5 md:block"
-          >
+          <Button size="sm" className="hidden h-auto rounded-sm px-2 py-1.5 md:block">
             Create
           </Button>
         </FormPopover>

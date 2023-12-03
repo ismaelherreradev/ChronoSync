@@ -8,12 +8,7 @@ import { toast } from 'sonner'
 
 import { useAction } from '@/hooks/use-action'
 import { Button } from '@/components/ui/button'
-import {
-  Popover,
-  PopoverClose,
-  PopoverContent,
-  PopoverTrigger,
-} from '@/components/ui/popover'
+import { Popover, PopoverClose, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 
 import { FormInput } from './form-input'
 import FormPicker from './form-picker'
@@ -69,12 +64,7 @@ export function FormPopover({
         <form action={onSubmit} className="space-y-4">
           <div className="space-y-4">
             <FormPicker id="image" errors={fieldErrors} />
-            <FormInput
-              id="title"
-              label="Board title"
-              type="text"
-              errors={fieldErrors}
-            />
+            <FormInput id="title" label="Board title" type="text" errors={fieldErrors} />
           </div>
           <FormSubmit className="w-full">Create</FormSubmit>
         </form>

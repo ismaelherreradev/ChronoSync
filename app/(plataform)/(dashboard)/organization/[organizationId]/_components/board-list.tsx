@@ -39,9 +39,7 @@ export async function BoardList() {
             style={{ backgroundImage: `url(${board.imageThumbUrl})` }}
           >
             <div className="absolute inset-0 bg-black/30 transition group-hover:bg-black/40">
-              <p className="relative p-2 font-semibold text-white">
-                {board.title}
-              </p>
+              <p className="relative p-2 font-semibold text-white">{board.title}</p>
             </div>
           </Link>
         ))}

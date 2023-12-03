@@ -3,11 +3,7 @@ import { usePathname, useRouter } from 'next/navigation'
 import { Activity, Layout, Settings } from 'lucide-react'
 
 import { cn } from '@/lib/utils'
-import {
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion'
+import { AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { Button } from '@/components/ui/button'
 import { Skeleton } from '@/components/ui/skeleton'
 
@@ -25,12 +21,7 @@ type NavItemProps = {
   onExpand: (id: string) => void
 }
 
-export function NavItem({
-  organization,
-  isActive,
-  isExpanded,
-  onExpand,
-}: NavItemProps) {
+export function NavItem({ organization, isActive, isExpanded, onExpand }: NavItemProps) {
   const router = useRouter()
   const pathname = usePathname()
 

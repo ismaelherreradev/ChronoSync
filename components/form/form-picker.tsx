@@ -20,8 +20,7 @@ type FormPickerProps = {
 export default function FormPicker({ id, errors }: FormPickerProps) {
   const { pending } = useFormStatus()
 
-  const [images, setImages] =
-    useState<Array<Record<string, any>>>(defaultImages)
+  const [images, setImages] = useState<Array<Record<string, any>>>(defaultImages)
   const [isLoading, setIsLoading] = useState(true)
   const [selectedImageId, setSelectedImageId] = useState(null)
 
