@@ -7,6 +7,7 @@ import { fetcher } from '@/lib/fetcher'
 import { useCardModal } from '@/hooks/use-card-modal'
 import { Dialog, DialogContent } from '@/components/ui/dialog'
 
+import { Actions } from './actions'
 import { Description } from './description'
 import { Header } from './header'
 
@@ -30,6 +31,7 @@ export function CardModal() {
               {!cardData ? <Description.Skeleton /> : <Description data={cardData} />}
             </div>
           </div>
+          {!cardData ? <Actions.Skeleton /> : <Actions data={cardData} />}
         </div>
       </DialogContent>
     </Dialog>

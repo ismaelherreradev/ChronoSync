@@ -15,7 +15,7 @@ import { Skeleton } from '@/components/ui/skeleton'
 import { FormSubmit } from '@/components/form/form-submit'
 import { FormTextarea } from '@/components/form/form-textarea'
 
-interface DescriptionProps {
+type DescriptionProps = {
   data: CardWithList
 }
 
@@ -33,9 +33,7 @@ export function Description({ data }: DescriptionProps) {
       queryClient.invalidateQueries({
         queryKey: ['card', data.id],
       })
-      queryClient.invalidateQueries({
-        queryKey: ['card-logs', data.id],
-      })
+
       toast.success(`Card "${data.title}" updated`)
       disableEditing()
     },
@@ -101,7 +99,7 @@ export function Description({ data }: DescriptionProps) {
           <div
             onClick={enableEditing}
             role="button"
-            className="min-h-[78px] rounded-md px-3.5 py-3 text-sm font-medium"
+            className="min-h-[78px] rounded-md bg-muted px-3.5 py-3 text-sm font-medium"
           >
             {data.description || 'Add a more detailed description...'}
           </div>
