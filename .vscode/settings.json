@@ -10,6 +10,6 @@
     "*.css": "tailwindcss"
   },
   "[prisma]": {
-    "editor.defaultFormatter": "Prisma.prisma"
+    "editor.defaultFormatter": "Prisma.prisma",
   }
 }

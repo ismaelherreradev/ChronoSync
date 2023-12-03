@@ -21,3 +21,7 @@ export const formatDateToLocal = (dateStr: string, locale: string = 'en-US') => 
   const formatter = new Intl.DateTimeFormat(locale, options)
   return formatter.format(date)
 }
+
+export function absoluteUrl(path: string) {
+  return `${process.env.NEXT_PUBLIC_APP_URL}${path}`
+}
